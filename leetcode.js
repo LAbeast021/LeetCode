@@ -110,3 +110,23 @@
 //   };
 
 // ==============================================================
+// remove dups #2 can have 2 or less of each number 
+var removeDuplicates = function(nums) {
+    let lastNumber, count ;
+    lastNumber = nums[0]
+    count = 1
+    for(i=1 ; i < nums.length ; i++ ){
+        if(nums[i] == lastNumber && count < 2){
+            count ++
+        }
+        else if(nums[i] == lastNumber){
+            nums.splice(i , 1)
+            i--
+        }
+        else {
+            lastNumber = nums[i]
+            count = 1
+        }
+
+    }
+};
