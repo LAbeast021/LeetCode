@@ -167,7 +167,12 @@
 // Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 var rotate = function(nums, k) {
     for (i = 1 ; i <= k ; i++ ){
-        nums.push(nums[nums.length-i])
+        let number = nums.pop()
+        // nums.unshift(nums[nums.length - i])
+        nums.unshift(number)
     }
+    console.log(nums)
     
 };
+
+rotate([1,2,3,4,5,6,7] , 3)
