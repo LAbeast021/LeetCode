@@ -147,19 +147,18 @@
 
 // The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array
 var majorityElement = function(nums) {
-    nums.sort((a,b) => a < b)
+    nums.sort((a,b) => a - b)
     console.log(nums)
-    let current = nums[0] , count = 1 , size = nums.length , half = size / 2 , k
+    let current , count = 0 , size = nums.length , half = Math.ceil(size/2) , k
 
-    for (i = 1 ; i < size ; i++){
+    for (i = 0 ; i < size ; i++){
         nums[i] === current ? count ++ : [current , count] = [nums[i] , 1]
-        console.log(current , "dddd" , count , "ffff" , )
+        console.log(current , "dddd" , count , "ffff" , half , "aaaa" , k)
         if (count == half ) {
             k = current
-            break
         }
     }
     return k
     
 };
-majorityElement([3,2,3])
+console.log(majorityElement([1]))
