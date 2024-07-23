@@ -146,19 +146,20 @@
 // Given an array nums of size n, return the majority element.
 
 // The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array
-var majorityElement = function(nums) {
-    nums.sort((a,b) => a - b)
-    console.log(nums)
-    let current , count = 0 , size = nums.length , half = Math.ceil(size/2) , k
+// var majorityElement = function(nums) {
+//     nums.sort((a,b) => a - b)
+//     console.log(nums)
+//     let current , count = 0 , size = nums.length , half = Math.ceil(size/2) , k
 
-    for (i = 0 ; i < size ; i++){
-        nums[i] === current ? count ++ : [current , count] = [nums[i] , 1]
-        console.log(current , "dddd" , count , "ffff" , half , "aaaa" , k)
-        if (count == half ) {
-            k = current
-        }
-    }
-    return k
+//     for (i = 0 ; i < size ; i++){
+//         nums[i] === current ? count ++ : [current , count] = [nums[i] , 1]
+//         console.log(current , "dddd" , count , "ffff" , half , "aaaa" , k)
+//         if (count == half ) {
+//             k = current
+//             break
+//         }
+//     }
+//     return k
     
-};
-console.log(majorityElement([1]))
+// };
+// console.log(majorityElement([1]))
