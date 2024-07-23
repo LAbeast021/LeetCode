@@ -163,3 +163,11 @@
     
 // };
 // console.log(majorityElement([1]))
+// ==========================================================================================================================
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+var rotate = function(nums, k) {
+    for (i = 1 ; i <= k ; i++ ){
+        nums.push(nums[nums.length-i])
+    }
+    
+};
